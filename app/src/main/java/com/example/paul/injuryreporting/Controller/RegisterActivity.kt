@@ -3,6 +3,7 @@ package com.example.paul.injuryreporting.Controller
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Toast
 import com.example.paul.injuryreporting.R
 import com.google.android.gms.tasks.OnCompleteListener
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.content_register.*
+import java.util.logging.Logger
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -34,6 +36,7 @@ class RegisterActivity : AppCompatActivity() {
                     Toast.makeText(this, "Successfully Registered", Toast.LENGTH_LONG).show()
                     startActivity(Intent(this, LoginActivity::class.java))
                 } else {
+                    Log.e("Error", task.exception.toString());
                     Toast.makeText(this, "Registration Failed", Toast.LENGTH_LONG).show()
                 }
             })

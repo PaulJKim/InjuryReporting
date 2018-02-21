@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="title_activity_injury_report">InjuryReportActivity</string>
 </resources>
